@@ -1,2 +1,2 @@
-# Ruby String Program
-Alex S. and Sammy's string capitalization program :)
+# Ruby Program
+Alex S. and Sammy's ruby programs :)
