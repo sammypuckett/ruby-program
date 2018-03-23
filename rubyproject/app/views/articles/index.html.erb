@@ -11,8 +11,12 @@
     <tr>
       <td><%= article.title %></td>
       <td><%= article.text %></td>
+      <td><%= link_to 'Delete', article_path(article),
+        method: :delete,
+        data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 </table>
 
 <td><%= link_to 'Post New Fact', new_article_path %></td>
+
