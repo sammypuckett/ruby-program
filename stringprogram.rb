@@ -1,3 +1,3 @@
-string = "OCtuPI arE GrEAt."
+string = "OCtuPI arE GrEAt."	
 
 string.capitalize

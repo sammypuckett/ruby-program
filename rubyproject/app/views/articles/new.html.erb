@@ -1,20 +1,52 @@
-<h1> New Post </h1>
+<head>
+  <title>Tomato Facts</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="pages.scss">
+</head>
+<body>
+<header class="container-fluid">
+  <div class="row">
+    <h1 class="col-sm-4"><td>New Fact</td></h1>
+    <nav class="col-sm-8 text-right">
+      <td><%= link_to 'Main Page', articles_path %></td>
+    </nav>
+  </div>
+  </header>
 
-
-<%= form_with scope: :article, url: articles_path, local: true do |form| %>
-  <p>
-    <%= form.label :title, "Author's Name" %><br>
-    <%= form.text_field :title %>
-  </p>
- 
-  <p>
-    <%= form.label :text, "Post" %><br>
-    <%= form.text_area :text %>
-  </p>
- 
-  <p>
-    <%=form.submit %>
-  </p>
-<% end %>
-
-<%= link_to 'Back', articles_path %>
+<body>
+  <section class="container">
+    <div class="row">
+      <div class="col-lg-3 col-sm-3 col-xs-4">
+        <%= form_with scope: :article, url: articles_path, local: true do |form| %>
+          <p>
+            <%= form.label :title, "Author's Name" %><br>
+            <%= form.text_field :title %>
+          </p>
+          <p>
+            <%= form.label :text, "Post" %><br>
+            <%= form.text_area :text %>
+          </p>
+          <p>
+            <%=form.submit %>
+          </p>
+        <% end %>
+      </div>
+      <div class="col-lg-2 col-sm-3 col-xs-4">
+        <img src="https://idsb.tmgrup.com.tr/2015/01/25/645x344/1422217699899.jpg" class="img-responsive"/>
+        <img src="https://bonnieplants.com/wp-content/uploads/husky-cherry-red-tomato.jpg" class="img-responsive"/>
+        <img src="https://bonnieplants.com/wp-content/uploads/tumbling-tom-red-tomato.jpg" class="img-responsive"/>
+      </div>
+      <div class="col-lg-2 col-sm-3 col-xs-4">
+        <img src="https://bonnieplants.com/wp-content/uploads/sungold-tomato.jpg" class="img-responsive"/>
+        <img src="https://www.adaptiveseeds.com/wp-content/uploads/2014/12/p-9232-tomato_orange_currant1.jpg" class="img-responsive"/>
+        <img src="https://opimedia.azureedge.net/-/media/images/men/editorial/articles/magazine-articles/2016/02-01/lycopene-in-orange-tomatoes/lycopene-orange-tomatoes-jpg.jpg" class="img-responsive"/>
+      </div>
+      <div class="col-lg-2 col-sm-3 col-xs-4">
+        <img src="http://farm2.static.flickr.com/1377/5102924066_1185f5b6b3.jpg" class="img-responsive"/>
+        <img src="https://i2.wp.com/greenevi.com/wp-content/uploads/2016/10/greenevi-quick-pickled-green-tomatoes02.jpg" class="img-responsive"/>
+        <img src="http://filantropikum.com/wp-content/uploads/2013/08/zold-paradicsom.jpg" class="img-responsive"/>
+      </div>
+    </div>
+</body>
