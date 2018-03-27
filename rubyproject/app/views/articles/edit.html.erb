@@ -19,7 +19,7 @@
     <section class="container">
       <div class="row">
         <div class="col-lg-3 col-sm-3 col-xs-4">
-          <%= form_with(model: @article) do |form| %>
+          <%= form_with(model: @article) do |form| %> <!-- checks for and reports any errors within the article -->
             <% if @article.errors.any? %>
               <div id="error_explanation">
                 <h2>
@@ -34,7 +34,7 @@
               </div>
             <% end %>
 
-            <p>
+            <p> <!-- same as the text fields from new.html.erb, except that these are filled with the pre-submitted strings -->
               <%= form.label :title %><br>
               <%= form.text_field :title %>
             </p>
