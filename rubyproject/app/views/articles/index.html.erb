@@ -26,7 +26,7 @@
         <p>Post</p>
       </div>
     </div>
-    <% @articles.each do |article| %>
+    <% @articles.each do |article| %> <!-- iterates through each recorded article and displays both the author and text-->
       <div class="row">
         <div class="col-lg-2 col-sm-3 col-xs-4">
           <%= article.title %>
@@ -35,12 +35,10 @@
           <%= article.text %>
         </div>
         <div class="col-lg-1 col-sm-1 col-xs-4">
-          <%= link_to 'Edit', edit_article_path(article) %>
+          <%= link_to 'Edit', edit_article_path(article) %> <!-- link for the option of editing an already submitted article, article-specific-->
         </div>
         <div class="col-lg-1 col-sm-1 col-xs-4">
-          <%= link_to 'Delete', article_path(article),
-            method: :delete,
-            data: { confirm: 'Are you sure?' } %>
+          <%= link_to 'Delete', article_path(article), method: :delete, data: { confirm: 'Are you sure?' } %> <!-- lin kfor the option of deleting an already submitted article, generates a confirmation pop-up when clicked-->
         </div>
     </div>
     <%end%>
