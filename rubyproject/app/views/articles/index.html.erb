@@ -1,23 +1,47 @@
+<head>
+  <title>Tomato Facts</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="pages.scss">
+</head>
+<body>
+<header class="container-fluid">
+  <div class="row">
+    <h1 class="col-sm-4"><td>Tomato Facts!</td></h1>
+    <nav class="col-sm-8 text-right">
+      <%= link_to 'Post New Fact', new_article_path %>
+    </nav>
+  </div>
+  </header>
 
-<h1>Facts</h1>
- 
-<table>
-  <tr>
-    <th>Author</th>
-    <th>Fact</th>
-  </tr>
- 
-  <% @articles.each do |article| %>
-    <tr>
-      <td><%= article.title %></td>
-      <td><%= article.text %></td>
-      <td><%= link_to 'Delete', article_path(article),
-        method: :delete,
-        data: { confirm: 'Are you sure?' } %></td>
-      <td><%= link_to 'Edit', edit_article_path(article) %></td>
-    </tr>
-  <% end %>
-</table>
 
-<td><%= link_to 'Post New Fact', new_article_path %></td>
-
+<body>
+  <section class="container">
+    <div class="row">
+      <div class="col-lg-2 col-sm-3 col-xs-4">
+        <p>Author</p>
+      </div>
+      <div class="col-lg-5 col-sm-5 col-xs-4">
+        <p>Post</p>
+      </div>
+    </div>
+    <% @articles.each do |article| %>
+      <div class="row">
+        <div class="col-lg-2 col-sm-3 col-xs-4">
+          <%= article.title %>
+        </div>
+        <div class="col-lg-5 col-sm-5 col-xs-4">
+          <%= article.text %>
+        </div>
+        <div class="col-lg-1 col-sm-1 col-xs-4">
+          <%= link_to 'Edit', edit_article_path(article) %>
+        </div>
+        <div class="col-lg-1 col-sm-1 col-xs-4">
+          <%= link_to 'Delete', article_path(article),
+            method: :delete,
+            data: { confirm: 'Are you sure?' } %>
+        </div>
+    </div>
+    <%end%>
+</body>
