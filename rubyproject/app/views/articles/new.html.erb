@@ -19,7 +19,7 @@
   <section class="container">
     <div class="row">
       <div class="col-lg-3 col-sm-3 col-xs-4">
-        <%= form_with scope: :article, url: articles_path, local: true do |form| %>
+        <%= form_with scope: :article, url: articles_path, local: true do |form| %> <!-- creates two text fields (title and text) that each submit a string of information into the articles database -->
           <p>
             <%= form.label :title, "Author's Name" %><br>
             <%= form.text_field :title %>
